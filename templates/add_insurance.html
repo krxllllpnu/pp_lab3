@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Insurance{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="policy_number" placeholder="Policy number" required>
+    <input type="number" name="coverage_amount" placeholder="Coverage amount" required>
+    <input type="date" name="issue_date" required>
+    <input type="date" name="expiry_date" required>
+    <button type="submit">Add insurance</button>
+</form>
+{% endblock %}

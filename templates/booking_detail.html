@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Booking Details{% endblock %}
+{% block content %}
+    <h1>Booking Details</h1>
+    
+    <h2>Flight Details</h2>
+    <p><strong>Departure Airport:</strong> {{ booking.flight.departure_airport.airport_name }}</p>
+    <p><strong>Arrival Airport:</strong> {{ booking.flight.arrival_airport.airport_name }}</p>
+    <p><strong>Departure Time:</strong> {{ booking.flight.departure_time }}</p>
+    <p><strong>Arrival Time:</strong> {{ booking.flight.arrival_time }}</p>
+    <p><strong>Airplane:</strong> {{ booking.flight.airplane.manufacturer }} {{ booking.flight.airplane.model }}</p>
+    
+    <h2>Passenger Details</h2>
+    <p><strong>Passenger:</strong> {{ booking.passenger.first_name }} {{ booking.passenger.last_name }}</p>
+    <p><strong>Seat Number:</strong> {{ booking.seat_number }}</p>
+    <p><strong>Booking Time:</strong> {{ booking.booking_time }}</p>
+    
+    <a href="{% url 'booking_edit' booking.booking_id %}" class="button">Edit</a>
+    <a href="{% url 'confirm_delete_booking' booking.booking_id %}" class="button" style="color: white;">Delete</a>
+    <a href="{% url 'booking_list' %}" class="button">Back to list</a>
+{% endblock %}

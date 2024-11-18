@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Beaver Airlines{% endblock %}
+
+{% block content %}
+<h2>Welcome to Beaver Airlines!</h2>
+<p>You can view the booking list or add a new booking.</p>
+<a href="{% url 'booking_list' %}" class="button">Booking List</a>
+<a href="{% url 'booking_add' %}" class="button">Book a flight</a>
+{% endblock %}

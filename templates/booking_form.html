@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}Create Booking{% endblock %}
+{% block content %}
+    <h1>Create Booking</h1>
+
+    <form method="post">
+        {% csrf_token %}
+    
+        <div class="form-group">
+            <label for="departure_airport">Departure Airport:</label>
+            <select id="departure_airport" name="departure_airport" class="form-control">
+                <option value="">Select departure airport</option>
+                {% for airport in airports %}
+                    <option value="{{ airport.airport_id }}">{{ airport.airport_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    
+        <div class="form-group">
+            <label for="arrival_airport">Arrival Airport:</label>
+            <select id="arrival_airport" name="arrival_airport" class="form-control">
+                <option value="">Select arrival airport</option>
+                {% for airport in airports %}
+                    <option value="{{ airport.airport_id }}">{{ airport.airport_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+    
+        <div class="form-group">
+            <label for="flight">Available Flights:</label>
+            <select id="flight" name="flight" class="form-control">
+                <option value="">Select a flight</option>
+            </select>
+        </div>
+    
+       <div class="form-group">
+            <label for="passenger_id">Select a passenger:</label>
+            <select id="passenger_id" name="passenger_id" class="form-control">
+                {% for passenger in passengers %}
+                    <option value="{{ passenger.passenger_id }}">{{ passenger.first_name }} {{ passenger.last_name }}</option>
+                {% endfor %}
+            </select>
+            <a href="{% url 'add_passenger' %}" class="button" style="margin-left: 10px">Add Passenger</a>
+        </div>
+    
+        <div class="form-group">
+            <label for="seat_number">Seat Number:</label>
+            <input type="text" id="seat_number" name="seat_number" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="button button_b">Create Booking</button>
+        </div>
+    </form>
+
+    <script>
+    document.getElementById('departure_airport').addEventListener('change', fetchAvailableFlights);
+    document.getElementById('arrival_airport').addEventListener('change', fetchAvailableFlights);
+
+    async function fetchAvailableFlights() {
+        const departureAirport = document.getElementById('departure_airport').value;
+        const arrivalAirport = document.getElementById('arrival_airport').value;
+
+        if (!departureAirport || !arrivalAirport) {
+            return;
+        }
+
+        try {
+            const response = await fetch(`/api/flights/available/${departureAirport}/${arrivalAirport}/`);
+            const flights = await response.json();
+
+            const flightSelect = document.getElementById('flight');
+            flightSelect.innerHTML = '<option value="">Select a flight</option>';
+
+            flights.forEach(flight => {
+                const option = document.createElement('option');
+                option.value = flight.flight_id;
+                option.textContent = `Flight ID: ${flight.flight_id}, Departure: ${flight.departure_time}, Arrival: ${flight.arrival_time}`;
+                flightSelect.appendChild(option);
+            });
+        } catch (error) {
+            console.error('Error fetching flights:', error);
+            alert('Failed to fetch available flights. Please try again later.');
+        }
+    }
+</script>
+{% endblock %}

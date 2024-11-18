@@ -1,0 +1,95 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    margin: 40px 60px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.booking_item {
+    margin-top: 10px;
+}
+
+.button_b {
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logout_button {
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    font-size: 18px;
+}

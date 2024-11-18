@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Booking List{% endblock %}
+
+{% block content %}
+    <h1>Booking List</h1>
+    <ul>
+        {% for booking in bookings %}
+            <li class="booking_item">
+                <a href="{% url 'booking_detail' booking.booking_id %}">
+                    Booking {{ booking_id }}: {{ booking.passenger.first_name }} {{ booking.passenger.last_name }} - Flight {{ booking.flight.id }}
+                </a>
+            </li>
+        {% empty %}
+            <li>No available bookings.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'booking_add' %}" class="button">Book a flight</a>
+{% endblock %}
