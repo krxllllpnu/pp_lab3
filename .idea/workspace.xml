@@ -4,37 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499312d3-b4b5-4931-b022-14913bd6b7e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/lab3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/airplane_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/airport_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/booking_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/crew_member_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/flight_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/flight_review_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/passenger_insurance_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/passenger_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/repositories/repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beaver_airlines/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_insurance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/add_passenger.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/booking_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/booking_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/booking_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+    <list default="true" id="499312d3-b4b5-4931-b022-14913bd6b7e4" name="Changes" comment="Complete Project v0.1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "krxllllpnu"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/krxllllpnu/pp_lab3.git",
+    "accountId": "e76e30b4-9c2c-4ac3-a126-0f5cecb0d6ed"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1
 }]]></component>
@@ -125,11 +108,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731875430157</updated>
-      <workItem from="1731875431176" duration="32627000" />
+      <workItem from="1731875431176" duration="33585000" />
     </task>
+    <task id="LOCAL-00001" summary="Complete Project v0.1">
+      <option name="closed" value="true" />
+      <created>1731909860425</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731909860425</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Complete Project v0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete Project v0.1" />
   </component>
 </project>
