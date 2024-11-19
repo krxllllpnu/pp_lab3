@@ -36,7 +36,7 @@ def is_admin(user):
     return user.is_staff
 
 @login_required
-def add_passenger(request):
+def add_passenger_by_user(request):
     if request.method == 'POST':
         first_name = request.POST.get('first_name')
         last_name = request.POST.get('last_name')
@@ -50,29 +50,27 @@ def add_passenger(request):
             phone=phone
         )
 
-        return redirect('add_insurance', passenger_id=passenger.passenger_id)
+        return redirect('add_insurance_by_user', passenger_id=passenger.passenger_id)
 
     return render(request, 'add_passenger.html')
 
 @login_required
-def add_insurance(request, passenger_id):
+def add_insurance_by_user(request, passenger_id):
     if request.method == 'POST':
         policy_number = request.POST.get('policy_number')
         coverage_amount = request.POST.get('coverage_amount')
         issue_date = request.POST.get('issue_date')
         expiry_date = request.POST.get('expiry_date')
 
-        passenger = Repository.passengers().get_by_id(passenger_id)
-
         Repository.passenger_insurance().create(
-            passenger=passenger.passenger_id,
+            passenger_id=passenger_id,
             policy_number=policy_number,
             coverage_amount=coverage_amount,
             issue_date=issue_date,
             expiry_date=expiry_date
         )
 
-        return redirect('booking_form')
+        return redirect('booking_add_by_user')
 
     return render(request, 'add_insurance.html', {'passenger_id': passenger_id})
 
@@ -147,7 +145,7 @@ def booking_detail(request, booking_id):
     return render(request, 'booking_detail.html', {'booking': booking})
 
 @login_required
-def delete_booking(request, booking_id):
+def delete_booking_by_user(request, booking_id):
     booking = Repository.bookings().get_by_id(booking_id)
 
     try:

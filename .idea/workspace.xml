@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="499312d3-b4b5-4931-b022-14913bd6b7e4" name="Changes" comment="Complete Project v0.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beaver_airlines/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/beaver_airlines/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beaver_airlines/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/beaver_airlines/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/add_passenger.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_passenger.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/booking_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/booking_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/booking_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/booking_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/booking_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/booking_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,21 +33,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "krxllllpnu"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;krxllllpnu&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/krxllllpnu/pp_lab3.git",
-    "accountId": "e76e30b4-9c2c-4ac3-a126-0f5cecb0d6ed"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/krxllllpnu/pp_lab3.git&quot;,
+    &quot;accountId&quot;: &quot;e76e30b4-9c2c-4ac3-a126-0f5cecb0d6ed&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2ozbcPuR91ug1vqz0Hxbvz9me81" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />

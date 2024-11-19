@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %}Add Passenger{% endblock %}
+
 {% block content %}
 
 <form method="post">
@@ -10,5 +12,7 @@
     <input type="text" name="phone" placeholder="Phone number">
     <button type="submit">Add passenger</button>
 </form>
+    
+    <h3 style="color: red">Warning! You need to use email you entered on registration.</h3>
     
 {% endblock %}

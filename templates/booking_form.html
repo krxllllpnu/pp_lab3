@@ -41,7 +41,7 @@
                     <option value="{{ passenger.passenger_id }}">{{ passenger.first_name }} {{ passenger.last_name }}</option>
                 {% endfor %}
             </select>
-            <a href="{% url 'add_passenger' %}" class="button" style="margin-left: 10px">Add Passenger</a>
+            <a href="{% url 'add_passenger_by_user' %}" class="button" style="margin-left: 10px">Add Passenger</a>
         </div>
     
         <div class="form-group">
