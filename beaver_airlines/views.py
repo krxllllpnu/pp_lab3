@@ -187,6 +187,63 @@ def confirm_delete_booking(request, booking_id):
     messages.success(request, "Booking successfully deleted.")
     return redirect('booking_list')
 
+import pandas as pd
+
+@api_view(['GET'])
+def get_airplanes_with_most_flights(request):
+    results = Repository.airplanes().get_airplanes_with_most_flights()
+    df = pd.DataFrame(list(results))
+    return Response(df.to_dict(orient='records'))
+
+@api_view(['GET'])
+def get_airports_with_most_departures(request):
+    results = Repository.airports().get_airports_with_most_departures()
+    df = pd.DataFrame(list(results))
+    return Response(df.to_dict(orient='records'))
+
+@api_view(['GET'])
+def get_crew_members_with_most_airplanes(request):
+    results = Repository.crew_members().get_crew_members_with_most_airplanes()
+    df = pd.DataFrame(list(results))
+    return Response(df.to_dict(orient='records'))
+
+@api_view(['GET'])
+def get_average_flight_duration(request):
+    result = Repository.flights().get_average_flight_duration()
+    if result and 'avg_duration' in result:
+        avg_duration = result['avg_duration']
+        if avg_duration:
+            df = pd.DataFrame([{"avg_duration": str(avg_duration)}])
+            return Response(df.to_dict(orient='records'))
+        else:
+            return Response({"message": "No flight durations available"}, status=404)
+    else:
+        return Response({"message": "Error calculating average duration"}, status=500)
+
+@api_view(['GET'])
+def get_flight_durations(request):
+    results = Repository.flights().get_flight_durations()
+    df = pd.DataFrame(list(results))
+    return Response(df.to_dict(orient='records'))
+
+@api_view(['GET'])
+def get_flights_with_most_bookings(request):
+    results = Repository.flights().get_flights_with_most_bookings()
+    df = pd.DataFrame(list(results))
+    return Response(df.to_dict(orient='records'))
+
+@api_view(['GET'])
+def get_average_rating_per_flight(request):
+    results = Repository.flight_reviews().get_average_rating_per_flight()
+    df = pd.DataFrame(list(results))
+    return Response(df.to_dict(orient='records'))
+
+@api_view(['GET'])
+def get_passengers_with_most_bookings(request):
+    results = Repository.passengers().get_passengers_with_most_bookings()
+    df = pd.DataFrame(list(results))
+    return Response(df.to_dict(orient='records'))
+
 @api_view(['GET'])
 @login_required
 @user_passes_test(is_admin)

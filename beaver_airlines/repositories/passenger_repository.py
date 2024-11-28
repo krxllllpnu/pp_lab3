@@ -1,7 +1,15 @@
 from beaver_airlines.models import Passenger
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Count
 
 class PassengerRepository:
+    @staticmethod
+    def get_passengers_with_most_bookings():
+        return Passenger.objects.annotate(
+            booking_count=Count('booking')
+        ).values(
+            'passenger_id', 'first_name', 'last_name', 'email', 'phone', 'booking_count'
+        ).order_by('-booking_count')
 
     @staticmethod
     def get_all():

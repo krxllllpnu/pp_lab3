@@ -1,7 +1,20 @@
 from beaver_airlines.models import Airplane
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Count
 
 class AirplaneRepository:
+    @staticmethod
+    def get_airplanes_with_most_flights():
+        return Airplane.objects.annotate(
+            flight_count=Count('flight')
+        ).filter(
+            flight_count__gt=0
+        ).order_by('-flight_count').values(
+            'airplane_id',
+            'manufacturer',
+            'model',
+            'flight_count'
+        )
 
     @staticmethod
     def get_all():

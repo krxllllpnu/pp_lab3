@@ -1,7 +1,18 @@
 from beaver_airlines.models import FlightReview, Flight, Passenger
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models import Avg, Count
 
 class FlightReviewRepository:
+    @staticmethod
+    def get_average_rating_per_flight():
+        return FlightReview.objects.values(
+            'flight__flight_id',
+            'flight__departure_airport__airport_name',
+            'flight__arrival_airport__airport_name'
+        ).annotate(
+            avg_rating=Avg('rating'),
+            review_count=Count('review_id')
+        ).order_by('-avg_rating')
 
     @staticmethod
     def get_all():
