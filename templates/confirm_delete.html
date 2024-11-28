@@ -17,7 +17,7 @@
             }
 
             try {
-                const response = await fetch("{% url 'delete_booking' booking.booking_id %}", {
+                const response = await fetch("{% url 'confirm_delete_booking' booking.booking_id %}", {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',

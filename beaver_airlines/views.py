@@ -158,14 +158,14 @@ def delete_booking_by_user(request, booking_id):
         messages.error(request, "You do not have the right to delete this booking.")
         return redirect('booking_list')
 
-    Repository.bookings().delete(booking_id)
-    messages.success(request, "Booking successfully deleted.")
-    return redirect('booking_list')
+    return render(request, 'confirm_delete.html', {'booking': booking})
 
 @login_required
 def confirm_delete_booking(request, booking_id):
     booking = Repository.bookings().get_by_id(booking_id)
-    return render(request, 'confirm_delete.html', {'booking': booking})
+    Repository.bookings().delete(booking_id)
+    messages.success(request, "Booking successfully deleted.")
+    return redirect('booking_list')
 
 @api_view(['GET'])
 @login_required

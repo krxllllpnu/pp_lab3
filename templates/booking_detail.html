@@ -16,6 +16,6 @@
     <p><strong>Booking Time:</strong> {{ booking.booking_time }}</p>
     
     <a href="{% url 'booking_edit_by_user' booking.booking_id %}" class="button">Edit</a>
-    <a href="{% url 'confirm_delete_booking' booking.booking_id %}" class="button" style="color: white;">Delete</a>
+    <a href="{% url 'delete_booking_by_user' booking.booking_id %}" class="button" style="color: white;">Delete</a>
     <a href="{% url 'booking_list' %}" class="button">Back to list</a>
 {% endblock %}

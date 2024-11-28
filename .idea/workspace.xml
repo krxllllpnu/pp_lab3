@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499312d3-b4b5-4931-b022-14913bd6b7e4" name="Changes" comment="Complete Project v0.1">
+    <list default="true" id="499312d3-b4b5-4931-b022-14913bd6b7e4" name="Changes" comment="Bug Fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beaver_airlines/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/beaver_airlines/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beaver_airlines/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/beaver_airlines/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/add_passenger.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/add_passenger.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/booking_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/booking_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/booking_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/booking_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/booking_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/booking_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/confirm_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +53,7 @@
     "Django Server.lab3.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -118,6 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731875430157</updated>
       <workItem from="1731875431176" duration="33585000" />
+      <workItem from="1732144780578" duration="146000" />
     </task>
     <task id="LOCAL-00001" summary="Complete Project v0.1">
       <option name="closed" value="true" />
@@ -127,14 +120,34 @@
       <option name="project" value="LOCAL" />
       <updated>1731909860425</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Bug Fixes">
+      <option name="closed" value="true" />
+      <created>1732038895109</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732038895109</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Complete Project v0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete Project v0.1" />
+    <MESSAGE value="Bug Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug Fixes" />
   </component>
 </project>
