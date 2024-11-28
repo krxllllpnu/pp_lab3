@@ -110,6 +110,26 @@ def booking_form(request):
     airports = Repository.airports().get_all()
     return render(request, 'booking_form.html', {'airports': airports, 'passengers': passengers})
 
+@login_required
+def booking_edit_by_user(request, booking_id):
+    booking = Repository.bookings().get_by_id(booking_id)
+
+    if request.method == 'POST':
+        seat_number = request.POST.get('seat_number')
+
+        booking = Repository.bookings().update(
+            booking_id,
+            seat_number=seat_number,
+            booking_time=timezone.now()
+        )
+
+        messages.success(request, "Booking successfully updated.")
+
+        return render(request, 'booking_detail.html', {'booking': booking})
+
+    return render(request, 'booking_edit.html', {'booking': booking})
+
+
 from django.http import JsonResponse
 
 @login_required

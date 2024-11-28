@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Booking Edit{% endblock %}
+{% block content %}
+    <h1>Booking Edit</h1>
+    
+    <h2>Flight Details</h2>
+    <p><strong>Departure Airport:</strong> {{ booking.flight.departure_airport.airport_name }}</p>
+    <p><strong>Arrival Airport:</strong> {{ booking.flight.arrival_airport.airport_name }}</p>
+    <p><strong>Departure Time:</strong> {{ booking.flight.departure_time }}</p>
+    <p><strong>Arrival Time:</strong> {{ booking.flight.arrival_time }}</p>
+    <p><strong>Airplane:</strong> {{ booking.flight.airplane.manufacturer }} {{ booking.flight.airplane.model }}</p>
+    
+    <h2>Passenger Details</h2>
+    <p><strong>Passenger:</strong> {{ booking.passenger.first_name }} {{ booking.passenger.last_name }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+                <label for="seat_number">Seat Number:</label>
+                <input type="text" id="seat_number" name="seat_number" class="form-control">
+        </div>
+    
+        <div class="form-group">
+            <button type="submit" class="button button_b">Update Booking</button>
+            <a href="{% url 'booking_detail' booking.booking_id %}" class="button">Cancel</a>
+        </div>
+    </form>
+{% endblock %}
